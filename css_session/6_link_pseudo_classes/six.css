@@ -1,0 +1,50 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+a {
+    color: aqua;
+    /* text-decoration: underline; */
+    text-decoration: none;
+}
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: yellow;
+}
+
+
+a:hover {
+    font-weight: bold;
+    font-size: 43px;
+}
+
+a:active {
+    color: green;
+}
+
+
+.btn {
+    background-color: gray;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+
+.btn:hover {
+    background-color: blue;
+    color: red;
+
+}
+
+
+.btn:active {
+    color: greenyellow;
+    font-size: 52px;
+}

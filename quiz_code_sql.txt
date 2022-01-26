@@ -1,0 +1,99 @@
+1. select Count(*)
+   from public.employees
+   where gender='F'
+
+2. select dept_name,count(*)
+from public.dept_emp as a join public.employees as b on a.emp_no=b.emp_no
+join public.departments using (dept_no)
+where gender='F'
+group by dept_name
+
+3. select distinct count (emp_no)
+   from public.dept_manager
+
+
+5. select title
+   from titles
+   group by title
+   order by count(emp_no) desc;
+
+6. select sum(salary) from salaries
+   where to_date < '2000-01-01'
+
+7. select e.first_name,e.last_name,e.emp_no,sum(salary) as total
+   from public.employees as e join public.salaries as s on e.emp_no=s.emp_no
+   group by e.emp_no
+   order by total desc
+   limit 1
+
+8. select e.first_name,e.last_name,e.emp_no,count(salary) as total
+   from public.employees as e join public.salaries as s on e.emp_no=s.emp_no
+   group by e.emp_no
+   order by total desc
+   limit 1
+
+9. select t.title , sum(s.salary) as total_salaries, avg(salary) as average, count(*), count(distinct emp_no) as emp_number
+   from titles  as t inner join salaries as s using(emp_no)
+   group by t.title
+
+*********************************************************************
+having:
+
+SELECT column_name(s)
+FROM table_name
+WHERE condition
+GROUP BY column_name(s)
+HAVING condition
+ORDER BY column_name(s);
+
+
+select t.title , sum(s.salary) as total_salaries, avg(salary) as average, count(*), count(distinct emp_no) as emp_number
+from titles  as t inner join salaries as s using(emp_no)
+group by t.title
+having count(distinct emp_no)>90000
+order by salary desc
+*************************************************************
+self join
+
+select a.birth_date, a.first_name, a.last_name, b.birth_date, b.first_name, b.last_name
+from public.employees as a inner join public.employees as b using(birth_date)
+where a.emp_no <> b.emp_no
+
+##<> ===> !=
+
+*********************************************************************************
+difference between inner join and join
+ The page you were on is trying to send you to https://favpng.com/png_view/joins-join-mysql-table-row-png/Y0jMWKWK.
+
+ If you do not want to visit that page, you can return to the previous page.
+
+*******************************************************************************************
+explaine:
+comes before query and tells about how this query works to execute data, timing, summury, cost....
+
+diagram: push hand button on top-right of query window
+
+explain
+select a.birth_date, a.first_name, a.last_name, b.birth_date, b.first_name, b.last_name
+from public.employees as a inner join public.employees as b using(birth_date)
+where a.emp_no <> b.emp_no
+
+***************************************************************************************
+view:
+a query that its results do not save as table. we save them as view
+a logical display of my query
+>>>>>study mor<<<<
+**********************************************************************************
+in postgres "" for tables
+	    '' for string
+******************************************************************************
+create user:
+create user maktab_user with encrypted password '123456'
+
+grant:
+grant all privileges on database "Employee" to maktab_user
+grant all privileges on  to maktab_user
+*****************************************************************************
+
+module of python to connect to database: psycopg2
+

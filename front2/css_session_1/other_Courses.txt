@@ -1,0 +1,4 @@
+View page source
+Inspect Elements
+Html self closing tags
+Table border css 

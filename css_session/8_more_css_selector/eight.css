@@ -1,0 +1,59 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+
+div p {
+    background-color: grey;
+} 
+
+div > p {
+    background-color: red;
+} 
+
+
+
+/* div + p, div + .test {
+    background-color: red;
+} */
+
+/* #salam + p, .hello + .test{ 
+    background-color: red;
+} */
+
+div li > p {
+    background-color: red;
+}
+
+a{
+    text-decoration: none;
+}
+
+a[target] {
+    background-color: green;
+    font-size: 34px;;
+}
+
+a[target="_blank"] {
+    background-color: red;
+}
+
+
+
+/* input[type="submit"]{
+    width: 100%;
+} */
+
+
+a::after {
+    content: "*";
+    color: red;
+    
+}
+
+a::before {
+    content: "**";
+    color: blue;
+    
+}

@@ -1,0 +1,35 @@
+#Box-1 {
+    background-color:rebeccapurple;
+    color: wheat;
+    border-width: 3px;
+    border-color: red;
+    border-style: solid;
+
+    border: 3px  solid red;
+    border-radius: 100%;
+    /* width: 100px; */
+    /* height: 100px; */
+}
+#Box-2 {
+    background: #ccc ;
+    border-top: 2px solid red;
+    border-right: 5px dotted yellow;
+    border-bottom: 5px solid green;
+    border-left: 5px dotted blue;
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 50px;
+}
+#Box-3 {
+    /* background-color: red; */    
+    border: 1px solid black;
+    /* height: 600px; */
+    /* width: 600px; */
+    background-image: url(../../images/Happy-Easter-Wallpapers-Set_06.jpg);
+    /* background-repeat: repeat-x; */
+    background-repeat: no-repeat;
+    background-position: 0px -200px;
+    /* background-position: bottom right; */
+    /* background-position: center center; */
+    /* background-size: contain; */
+    background-size: cover;
+}
